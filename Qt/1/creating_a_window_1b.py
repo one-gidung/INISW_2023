@@ -1,11 +1,14 @@
-from PySide6.QtWidgets import QApplication, QWidget
+from PySide6.QtWidgets import QApplication, QWidget, QLabel, QPushButton
 
 
-import sys
 
-app = QApplication(sys.argv)
+app = QApplication()
 
-window = QWidget()
+
+window = QPushButton('test')
 window.show()
+
+print(issubclass(QPushButton, QWidget))
+
 
 app.exec()

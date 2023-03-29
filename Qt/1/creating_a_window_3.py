@@ -1,12 +1,14 @@
-from PySide6.QtWidgets import QApplication, QMainWindow
+from PySide6.QtWidgets import QApplication, QPushButton
 
 import sys
 
 
 app = QApplication(sys.argv)
 
-window = QMainWindow()
-window.show()  # IMPORTANT!!!!! Windows are hidden by default.
+window = QPushButton('Push me')
+window.setFixedSize(400, 300)
+window.show()
 
-# Start the event loop.
+
+
 app.exec()
