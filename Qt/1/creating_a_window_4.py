@@ -12,7 +12,6 @@ from PySide6.QtWidgets import (
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()  # <2>
-
         self.setWindowTitle("My App")
 
 
