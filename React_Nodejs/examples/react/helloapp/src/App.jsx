@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import CountryList from './CountryList';
+import styles from './styles';
+import Footer from './Footer';
 
 const App = () => {
   const [countries, setContries] = useState([
@@ -8,6 +10,7 @@ const App = () => {
     { no:3, country:'피지', visited:false },
     { no:4, country:'콜롬비아', visited:false }
   ]);
+  const [theme, setTheme] = useState("basic");
 
   let msg = (<i>{'World'}</i>);
   const add = (x,y) => {
@@ -16,9 +19,10 @@ const App = () => {
   return (
     <div className="container">
       <h1>Hello {msg}!!</h1>
-      <hr className="dash-style" />
+      <hr style={styles.dashStyle}/>
       { add(4,5) }
       <CountryList countries={countries} />
+      <Footer theme={theme} />
     </div>
   );
 };
